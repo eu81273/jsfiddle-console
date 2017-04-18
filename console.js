@@ -7,14 +7,20 @@
         debug: window.console.debug,
         clear: window.console.clear,
     };
-    var $body = document.body;
 
     function append (message) {
-        $body.append(message);
+        if (document.body) {
+            document.body.append(message);
+        }
+        else {
+            setTimeout(append, 100, message);
+        }
     }
 
     function clear () {
-        $body.innerHtml = "";
+        if (document.body) {
+            document.body.innerHtml = null;
+        }
         _methods.clear.call(_console);
     };
 
