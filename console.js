@@ -127,7 +127,7 @@
             Function.prototype.apply.call(nativeConsole[key], nativeConsole, arguments);
             // Array.from -> Array.prototype.slice.call
             var result = Array.prototype.slice.call(arguments)[0];
-            appendElement(createElement(typeof result === 'object' ? stringify(result) : result, color));
+            appendElement(createElement(stringify(result), color));
         };
     }
 
