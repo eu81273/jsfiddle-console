@@ -126,8 +126,12 @@
             // Reflect.apply -> Function.prototype.apply.call
             Function.prototype.apply.call(nativeConsole[key], nativeConsole, arguments);
             // Array.from -> Array.prototype.slice.call
-            var result = Array.prototype.slice.call(arguments)[0];
-            appendElement(createElement(stringify(result), color));
+            var args = Array.prototype.slice.call(arguments)
+                .map(function (arg) {
+                    return stringify(arg);
+                })
+                .join(', ');
+            appendElement(createElement(args, color));
         };
     }
 
