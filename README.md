@@ -5,7 +5,7 @@
 Add the following URL to `External Resources` in jsfiddle then you will see `console.log` and `console.error` in the result screen.
 
 ```
-https://raw.githubusercontent.com/eu81273/jsfiddle-console/master/console.js
+https://cdn.jsdelivr.net/gh/eu81273/jsfiddle-console/console.js
 ```
 
 ### Example
